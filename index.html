@@ -1,1 +1,621 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <!-- ================= CHARSET & VIEWPORT ================= -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
+  <!-- ================= PRIMARY SEO ================= -->
+  <title>ToolGenic — Free Online Utility Tools for Images, PDFs, AI & More</title>
+  <meta name="description" content="ToolGenic is a free online toolbox with 500+ utilities for images, PDFs, AI, calculators, conversions and developers. No installs, no watermarks, 100% private processing in your browser.">
+  <link rel="canonical" href="https://toolgenic.com/">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="ToolGenic">
+  <meta name="language" content="English">
+  <meta name="theme-color" content="#0B0D12" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#F7F7FA" media="(prefers-color-scheme: light)">
+  <meta name="color-scheme" content="dark light">
+
+  <!-- ================= OPEN GRAPH ================= -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ToolGenic">
+  <meta property="og:title" content="ToolGenic — Free Online Utility Tools for Images, PDFs, AI & More">
+  <meta property="og:description" content="500+ free online tools for images, PDFs, AI, calculators, conversions and developers. Fast, private, and works entirely in your browser.">
+  <meta property="og:url" content="https://toolgenic.com/">
+  <meta property="og:image" content="https://toolgenic.com/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_US">
+
+  <!-- ================= TWITTER CARD ================= -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ToolGenic — Free Online Utility Tools">
+  <meta name="twitter:description" content="500+ free online tools for images, PDFs, AI, calculators, conversions and developers. Fast, private, no installs.">
+  <meta name="twitter:image" content="https://toolgenic.com/assets/og-image.png">
+
+  <!-- ================= APPLE / MOBILE WEB APP ================= -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="ToolGenic">
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+
+  <!-- ================= FAVICONS ================= -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <!-- ================= FONTS ================= -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+
+  <!-- ================= STYLES ================= -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- ================= STRUCTURED DATA: ORGANIZATION ================= -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "ToolGenic",
+    "url": "https://toolgenic.com/",
+    "logo": "https://toolgenic.com/assets/logo.png",
+    "sameAs": [
+      "https://github.com/toolgenic"
+    ]
+  }
+  </script>
+
+  <!-- ================= STRUCTURED DATA: WEBSITE + SEARCH ================= -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "ToolGenic",
+    "url": "https://toolgenic.com/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://toolgenic.com/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <!-- ================= STRUCTURED DATA: WEBPAGE ================= -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "ToolGenic — Free Online Utility Tools",
+    "url": "https://toolgenic.com/",
+    "description": "ToolGenic is a free online toolbox with 500+ utilities for images, PDFs, AI, calculators, conversions and developers.",
+    "isPartOf": {
+      "@type": "WebSite",
+      "url": "https://toolgenic.com/"
+    }
+  }
+  </script>
+
+  <!-- ================= STRUCTURED DATA: FAQ ================= -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is ToolGenic really free to use?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Every tool on ToolGenic is free, with no hidden tiers, no sign-up wall, and no watermark added to your files."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are my files uploaded to a server?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most tools process your files directly in your browser using client-side technology, so your files never leave your device. Where server processing is required, files are deleted automatically after conversion."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need to install any software?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No installation is required. ToolGenic runs entirely in your web browser on desktop, tablet, and mobile devices."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What file types does ToolGenic support?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "ToolGenic supports common image formats like JPG, PNG, WEBP, and HEIC, document formats like PDF and DOCX, and dozens of other formats across our conversion and developer tools."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is there a limit on how many times I can use a tool?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. You can use any tool on ToolGenic as many times as you need, without daily limits or paid upgrades."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does ToolGenic work on mobile devices?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Every tool is built to be fully responsive, so you can compress images, edit PDFs, and run conversions from your phone or tablet just as easily as from a desktop."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="tg-body">
+
+  <!-- Skip link for keyboard/screen-reader users -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ================================================================
+       HEADER / NAVBAR
+  ================================================================= -->
+  <header id="site-header" class="tg-header" role="banner">
+    <nav class="tg-nav" aria-label="Primary navigation">
+
+      <a href="/" id="logo-link" class="tg-logo" aria-label="ToolGenic home">
+        <svg class="tg-logo-mark" width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+          <rect x="2" y="2" width="10" height="10" rx="3" fill="var(--accent-primary)"/>
+          <rect x="16" y="2" width="10" height="10" rx="3" fill="var(--accent-secondary)"/>
+          <rect x="9" y="16" width="10" height="10" rx="3" fill="var(--text-primary)"/>
+        </svg>
+        <span class="tg-logo-text">ToolGenic</span>
+      </a>
+
+      <button id="mobile-menu-toggle" class="tg-mobile-toggle" type="button" aria-expanded="false" aria-controls="primary-menu" aria-label="Open navigation menu">
+        <span class="tg-hamburger" aria-hidden="true"></span>
+      </button>
+
+      <ul id="primary-menu" class="tg-menu">
+        <li><a href="/" class="tg-menu-link tg-menu-link--active">Home</a></li>
+        <li><a href="/categories/image-tools.html" class="tg-menu-link">Image Tools</a></li>
+        <li><a href="/categories/pdf-tools.html" class="tg-menu-link">PDF Tools</a></li>
+        <li><a href="/categories/ai-tools.html" class="tg-menu-link">AI Tools</a></li>
+        <li><a href="/categories/calculators.html" class="tg-menu-link">Calculators</a></li>
+        <li><a href="/categories/converters.html" class="tg-menu-link">Converters</a></li>
+        <li><a href="/categories/developer-tools.html" class="tg-menu-link">Developer Tools</a></li>
+      </ul>
+
+      <div class="tg-nav-actions">
+        <button id="nav-search-btn" class="tg-icon-btn" type="button" aria-label="Search tools" aria-haspopup="true" aria-expanded="false" aria-controls="nav-search-panel">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/>
+            <line x1="21" y1="21" x2="16.65" y2="16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+
+        <div id="nav-search-panel" class="tg-search-panel" role="search" hidden>
+          <label for="nav-search-input" class="sr-only">Search tools</label>
+          <input type="search" id="nav-search-input" class="tg-search-input" placeholder="Search 500+ tools…" autocomplete="off">
+        </div>
+
+        <button id="theme-toggle" class="tg-icon-btn" type="button" aria-pressed="false" aria-label="Switch to light mode">
+          <svg class="tg-icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+          </svg>
+          <svg class="tg-icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+
+        <a href="/tools/index.html" id="explore-tools-btn" class="tg-btn tg-btn--primary tg-btn--nav">Explore Tools</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ================================================================
+         HERO
+    ================================================================= -->
+    <section id="hero" class="tg-hero" aria-labelledby="hero-heading">
+      <div class="tg-hero-inner">
+        <p class="tg-eyebrow">500+ tools · one toolbox</p>
+        <h1 id="hero-heading" class="tg-hero-title">Free Online Utility Tools</h1>
+        <p class="tg-hero-subtitle">
+          <span class="tg-hero-tag">Fast</span>
+          <span class="tg-hero-tag">Secure</span>
+          <span class="tg-hero-tag">Private</span>
+          <span class="tg-hero-tag">100% Free</span>
+        </p>
+
+        <form id="hero-search-form" class="tg-hero-search" role="search" action="/search" method="get">
+          <label for="hero-search-input" class="sr-only">Search for a tool</label>
+          <svg class="tg-hero-search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/>
+            <line x1="21" y1="21" x2="16.65" y2="16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <input type="search" id="hero-search-input" name="q" class="tg-hero-search-input" placeholder="Try “compress image” or “merge PDF”…" autocomplete="off">
+          <button type="submit" id="hero-search-submit" class="tg-btn tg-btn--primary">Search</button>
+        </form>
+
+        <div class="tg-hero-popular" aria-label="Popular searches">
+          <span class="tg-hero-popular-label">Popular:</span>
+          <a href="/tools/compress-image.html" class="tg-chip">Compress Image</a>
+          <a href="/tools/merge-pdf.html" class="tg-chip">Merge PDF</a>
+          <a href="/tools/heic-to-jpg.html" class="tg-chip">HEIC to JPG</a>
+          <a href="/tools/background-remover.html" class="tg-chip">Background Remover</a>
+        </div>
+
+        <div class="tg-hero-ctas">
+          <a href="/tools/index.html" id="hero-explore-btn" class="tg-btn tg-btn--primary tg-btn--lg">Explore Tools</a>
+          <a href="#categories" id="hero-browse-btn" class="tg-btn tg-btn--secondary tg-btn--lg">Browse Categories</a>
+        </div>
+      </div>
+
+      <!-- Signature visual: layered "pipeline" cards representing Upload → Process → Download -->
+      <div class="tg-hero-visual" aria-hidden="true">
+        <div class="tg-pipeline-card tg-pipeline-card--1">
+          <span class="tg-pipeline-label">Upload</span>
+          <div class="tg-pipeline-bar"></div>
+        </div>
+        <div class="tg-pipeline-card tg-pipeline-card--2">
+          <span class="tg-pipeline-label">Process</span>
+          <div class="tg-pipeline-bar"></div>
+        </div>
+        <div class="tg-pipeline-card tg-pipeline-card--3">
+          <span class="tg-pipeline-label">Download</span>
+          <div class="tg-pipeline-bar"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         CATEGORIES
+    ================================================================= -->
+    <section id="categories" class="tg-section tg-categories" aria-labelledby="categories-heading">
+      <div class="tg-section-header">
+        <p class="tg-eyebrow">Browse by category</p>
+        <h2 id="categories-heading" class="tg-section-title">Six categories. Hundreds of tools.</h2>
+        <p class="tg-section-subtitle">Every tool on ToolGenic is organized into a category so you can find what you need in seconds.</p>
+      </div>
+
+      <div class="tg-category-grid">
+        <a href="/categories/image-tools.html" class="category-card category-card--large">
+          <svg class="category-card-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/>
+            <circle cx="8.5" cy="8.5" r="1.5" fill="currentColor"/>
+            <path d="M21 15l-5-5L5 21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <h3 class="category-card-title">Image Tools</h3>
+          <p class="category-card-desc">Compress, resize, convert, and edit images without losing quality.</p>
+          <span class="category-card-count">120+ tools</span>
+        </a>
+
+        <a href="/categories/pdf-tools.html" class="category-card">
+          <svg class="category-card-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M6 2h9l5 5v15a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            <path d="M15 2v5h5" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+          </svg>
+          <h3 class="category-card-title">PDF Tools</h3>
+          <p class="category-card-desc">Merge, split, compress, and convert PDF files in seconds.</p>
+          <span class="category-card-count">90+ tools</span>
+        </a>
+
+        <a href="/categories/ai-tools.html" class="category-card">
+          <svg class="category-card-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M12 2l2.4 6.6L21 11l-6.6 2.4L12 20l-2.4-6.6L3 11l6.6-2.4L12 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+          </svg>
+          <h3 class="category-card-title">AI Tools</h3>
+          <p class="category-card-desc">Remove backgrounds, upscale photos, and generate content with AI.</p>
+          <span class="category-card-count">60+ tools</span>
+        </a>
+
+        <a href="/categories/calculators.html" class="category-card">
+          <svg class="category-card-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <rect x="4" y="2" width="16" height="20" rx="2" stroke="currentColor" stroke-width="2"/>
+            <path d="M8 7h8M8 12h.01M12 12h.01M16 12h.01M8 16h.01M12 16h.01M16 16h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <h3 class="category-card-title">Calculators</h3>
+          <p class="category-card-desc">Everyday math, finance, health, and unit conversion calculators.</p>
+          <span class="category-card-count">80+ tools</span>
+        </a>
+
+        <a href="/categories/converters.html" class="category-card">
+          <svg class="category-card-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M17 3l4 4-4 4M21 7H7M7 21l-4-4 4-4M3 17h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <h3 class="category-card-title">Converters</h3>
+          <p class="category-card-desc">File, unit, and format converters that work in any browser.</p>
+          <span class="category-card-count">100+ tools</span>
+        </a>
+
+        <a href="/categories/developer-tools.html" class="category-card">
+          <svg class="category-card-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M8 9l-5 3 5 3M16 9l5 3-5 3M13 5l-2 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <h3 class="category-card-title">Developer Tools</h3>
+          <p class="category-card-desc">JSON, regex, encoding, and formatting tools built for developers.</p>
+          <span class="category-card-count">70+ tools</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         FEATURED TOOLS
+    ================================================================= -->
+    <section id="featured-tools" class="tg-section tg-featured" aria-labelledby="featured-tools-heading">
+      <div class="tg-section-header">
+        <p class="tg-eyebrow">Most used</p>
+        <h2 id="featured-tools-heading" class="tg-section-title">Featured tools</h2>
+        <p class="tg-section-subtitle">The tools people reach for first — no sign-up required.</p>
+      </div>
+
+      <div class="tg-tool-grid">
+
+        <article class="tool-card">
+          <div class="tool-card-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 14l4-4 3 3 5-6 4 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" stroke-width="2"/></svg>
+          </div>
+          <h3 class="tool-card-title">Compress Image</h3>
+          <p class="tool-card-desc">Shrink JPG, PNG, and WEBP file sizes while keeping visual quality.</p>
+          <a href="/tools/compress-image.html" id="open-tool-compress-image" class="tg-btn tg-btn--secondary tg-btn--sm">Open Tool</a>
+        </article>
+
+        <article class="tool-card">
+          <div class="tool-card-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M8 3H5a2 2 0 0 0-2 2v3M16 3h3a2 2 0 0 1 2 2v3M8 21H5a2 2 0 0 1-2-2v-3M16 21h3a2 2 0 0 0 2-2v-3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h3 class="tool-card-title">Resize Image</h3>
+          <p class="tool-card-desc">Scale any image to an exact width, height, or aspect ratio.</p>
+          <a href="/tools/resize-image.html" id="open-tool-resize-image" class="tg-btn tg-btn--secondary tg-btn--sm">Open Tool</a>
+        </article>
+
+        <article class="tool-card">
+          <div class="tool-card-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/><path d="M8 12h8M8 16h5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h3 class="tool-card-title">HEIC to JPG</h3>
+          <p class="tool-card-desc">Convert iPhone HEIC photos into universally supported JPG files.</p>
+          <a href="/tools/heic-to-jpg.html" id="open-tool-heic-to-jpg" class="tg-btn tg-btn--secondary tg-btn--sm">Open Tool</a>
+        </article>
+
+        <article class="tool-card">
+          <div class="tool-card-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3 class="tool-card-title">WebP Converter</h3>
+          <p class="tool-card-desc">Convert images to and from WebP for smaller, faster web pages.</p>
+          <a href="/tools/webp-converter.html" id="open-tool-webp-converter" class="tg-btn tg-btn--secondary tg-btn--sm">Open Tool</a>
+        </article>
+
+        <article class="tool-card">
+          <div class="tool-card-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M7 3h7l5 5v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9 13h6M9 17h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h3 class="tool-card-title">Merge PDF</h3>
+          <p class="tool-card-desc">Combine multiple PDF files into a single document in the right order.</p>
+          <a href="/tools/merge-pdf.html" id="open-tool-merge-pdf" class="tg-btn tg-btn--secondary tg-btn--sm">Open Tool</a>
+        </article>
+
+        <article class="tool-card">
+          <div class="tool-card-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 4v16M6 9l6-5 6 5M6 15l6 5 6-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3 class="tool-card-title">Split PDF</h3>
+          <p class="tool-card-desc">Pull single pages or page ranges out of any PDF file.</p>
+          <a href="/tools/split-pdf.html" id="open-tool-split-pdf" class="tg-btn tg-btn--secondary tg-btn--sm">Open Tool</a>
+        </article>
+
+        <article class="tool-card">
+          <div class="tool-card-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h3 class="tool-card-title">Word Counter</h3>
+          <p class="tool-card-desc">Count words, characters, and reading time as you type or paste text.</p>
+          <a href="/tools/word-counter.html" id="open-tool-word-counter" class="tg-btn tg-btn--secondary tg-btn--sm">Open Tool</a>
+        </article>
+
+        <article class="tool-card">
+          <div class="tool-card-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2"/><path d="M4 21c0-4 3.5-6 8-6s8 2 8 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h3 class="tool-card-title">Background Remover</h3>
+          <p class="tool-card-desc">Cut out backgrounds from portraits and product photos automatically.</p>
+          <a href="/tools/background-remover.html" id="open-tool-background-remover" class="tg-btn tg-btn--secondary tg-btn--sm">Open Tool</a>
+        </article>
+
+      </div>
+
+      <div class="tg-featured-footer">
+        <a href="/tools/index.html" id="view-all-tools-btn" class="tg-btn tg-btn--secondary">View all 500+ tools</a>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         WHY TOOLGENIC
+    ================================================================= -->
+    <section id="why-toolgenic" class="tg-section tg-why" aria-labelledby="why-toolgenic-heading">
+      <div class="tg-section-header">
+        <p class="tg-eyebrow">Why ToolGenic</p>
+        <h2 id="why-toolgenic-heading" class="tg-section-title">Built to be trusted, not just used</h2>
+      </div>
+
+      <div class="tg-why-grid">
+        <div class="why-card">
+          <svg class="why-card-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+          <h3 class="why-card-title">Fast Processing</h3>
+          <p class="why-card-desc">Most tools run instantly in your browser with no upload wait times.</p>
+        </div>
+        <div class="why-card">
+          <svg class="why-card-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+          <h3 class="why-card-title">Privacy First</h3>
+          <p class="why-card-desc">Your files stay on your device whenever a tool can run client-side.</p>
+        </div>
+        <div class="why-card">
+          <svg class="why-card-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <h3 class="why-card-title">No Watermark</h3>
+          <p class="why-card-desc">Every download is clean — no logos, no branding stamped on your files.</p>
+        </div>
+        <div class="why-card">
+          <svg class="why-card-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2" stroke="currentColor" stroke-width="2"/><path d="M8 21h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <h3 class="why-card-title">Responsive</h3>
+          <p class="why-card-desc">Every layout adapts smoothly from a wide monitor down to a small phone.</p>
+        </div>
+        <div class="why-card">
+          <svg class="why-card-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2" stroke="currentColor" stroke-width="2"/><path d="M11 18h2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <h3 class="why-card-title">Mobile Friendly</h3>
+          <p class="why-card-desc">Tap-friendly controls make every tool easy to use with one hand.</p>
+        </div>
+        <div class="why-card">
+          <svg class="why-card-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 4h16v12H4zM8 20h8M12 16v4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <h3 class="why-card-title">Works in Browser</h3>
+          <p class="why-card-desc">Nothing to install — open a tab and start working right away.</p>
+        </div>
+        <div class="why-card">
+          <svg class="why-card-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <h3 class="why-card-title">100% Free</h3>
+          <p class="why-card-desc">No premium tier, no usage caps, and no credit card required — ever.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         HOW IT WORKS
+    ================================================================= -->
+    <section id="how-it-works" class="tg-section tg-how" aria-labelledby="how-it-works-heading">
+      <div class="tg-section-header">
+        <p class="tg-eyebrow">Three steps</p>
+        <h2 id="how-it-works-heading" class="tg-section-title">How it works</h2>
+      </div>
+
+      <ol class="tg-steps">
+        <li class="tg-step">
+          <span class="tg-step-number" aria-hidden="true">01</span>
+          <h3 class="tg-step-title">Upload</h3>
+          <p class="tg-step-desc">Drag a file into any tool, or pick one from your device.</p>
+        </li>
+        <li class="tg-step">
+          <span class="tg-step-number" aria-hidden="true">02</span>
+          <h3 class="tg-step-title">Process</h3>
+          <p class="tg-step-desc">ToolGenic compresses, converts, or edits it in seconds.</p>
+        </li>
+        <li class="tg-step">
+          <span class="tg-step-number" aria-hidden="true">03</span>
+          <h3 class="tg-step-title">Download</h3>
+          <p class="tg-step-desc">Save your finished file — clean, unwatermarked, ready to use.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ================================================================
+         POPULAR SEARCHES
+    ================================================================= -->
+    <section id="popular-searches" class="tg-section tg-popular-searches" aria-labelledby="popular-searches-heading">
+      <h2 id="popular-searches-heading" class="tg-section-title tg-section-title--sm">Popular searches</h2>
+      <div class="tg-chip-cloud">
+        <a href="/tools/compress-image.html" class="tg-chip">Compress Image</a>
+        <a href="/tools/resize-image.html" class="tg-chip">Resize Image</a>
+        <a href="/tools/heic-to-jpg.html" class="tg-chip">HEIC to JPG</a>
+        <a href="/tools/png-to-jpg.html" class="tg-chip">PNG to JPG</a>
+        <a href="/tools/webp-converter.html" class="tg-chip">WebP Converter</a>
+        <a href="/tools/merge-pdf.html" class="tg-chip">Merge PDF</a>
+        <a href="/tools/split-pdf.html" class="tg-chip">Split PDF</a>
+        <a href="/tools/image-to-pdf.html" class="tg-chip">Image to PDF</a>
+        <a href="/tools/jpg-to-png.html" class="tg-chip">JPG to PNG</a>
+        <a href="/tools/background-remover.html" class="tg-chip">Background Remover</a>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         FAQ
+    ================================================================= -->
+    <section id="faq" class="tg-section tg-faq" aria-labelledby="faq-heading">
+      <div class="tg-section-header">
+        <p class="tg-eyebrow">Questions</p>
+        <h2 id="faq-heading" class="tg-section-title">Frequently asked questions</h2>
+      </div>
+
+      <div class="tg-faq-list">
+        <details class="tg-faq-item">
+          <summary class="tg-faq-question">Is ToolGenic really free to use?</summary>
+          <p class="tg-faq-answer">Yes. Every tool on ToolGenic is free, with no hidden tiers, no sign-up wall, and no watermark added to your files.</p>
+        </details>
+        <details class="tg-faq-item">
+          <summary class="tg-faq-question">Are my files uploaded to a server?</summary>
+          <p class="tg-faq-answer">Most tools process your files directly in your browser using client-side technology, so your files never leave your device. Where server processing is required, files are deleted automatically after conversion.</p>
+        </details>
+        <details class="tg-faq-item">
+          <summary class="tg-faq-question">Do I need to install any software?</summary>
+          <p class="tg-faq-answer">No installation is required. ToolGenic runs entirely in your web browser on desktop, tablet, and mobile devices.</p>
+        </details>
+        <details class="tg-faq-item">
+          <summary class="tg-faq-question">What file types does ToolGenic support?</summary>
+          <p class="tg-faq-answer">ToolGenic supports common image formats like JPG, PNG, WEBP, and HEIC, document formats like PDF and DOCX, and dozens of other formats across our conversion and developer tools.</p>
+        </details>
+        <details class="tg-faq-item">
+          <summary class="tg-faq-question">Is there a limit on how many times I can use a tool?</summary>
+          <p class="tg-faq-answer">No. You can use any tool on ToolGenic as many times as you need, without daily limits or paid upgrades.</p>
+        </details>
+        <details class="tg-faq-item">
+          <summary class="tg-faq-question">Does ToolGenic work on mobile devices?</summary>
+          <p class="tg-faq-answer">Yes. Every tool is built to be fully responsive, so you can compress images, edit PDFs, and run conversions from your phone or tablet just as easily as from a desktop.</p>
+        </details>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================================================================
+       FOOTER
+  ================================================================= -->
+  <footer id="site-footer" class="tg-footer" role="contentinfo">
+    <div class="tg-footer-top">
+      <div class="tg-footer-brand">
+        <span class="tg-logo-text">ToolGenic</span>
+        <p class="tg-footer-tagline">Free online utility tools for everyone.</p>
+      </div>
+
+      <nav class="tg-footer-nav" aria-label="Footer navigation">
+        <div class="tg-footer-col">
+          <h3 class="tg-footer-heading">Company</h3>
+          <ul class="tg-footer-links">
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="/terms.html">Terms</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="tg-footer-col">
+          <h3 class="tg-footer-heading">Categories</h3>
+          <ul class="tg-footer-links">
+            <li><a href="/categories/image-tools.html">Image Tools</a></li>
+            <li><a href="/categories/pdf-tools.html">PDF Tools</a></li>
+            <li><a href="/categories/ai-tools.html">AI Tools</a></li>
+            <li><a href="/categories/developer-tools.html">Developer Tools</a></li>
+          </ul>
+        </div>
+        <div class="tg-footer-col">
+          <h3 class="tg-footer-heading">Connect</h3>
+          <ul class="tg-footer-links">
+            <li><a href="https://github.com/toolgenic" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="tg-footer-bottom">
+      <p class="tg-footer-copyright">&copy; <span id="current-year">2026</span> ToolGenic. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ================= SCRIPTS ================= -->
+  <script src="script.js"></script>
+</body>
+</html>
