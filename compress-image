@@ -1,0 +1,939 @@
+/* =====================================================================
+   COMPRESS IMAGE — TOOL-SPECIFIC STYLES
+   Builds on the CSS variables defined in /style.css (colors, spacing,
+   radii, shadows, fonts). Nothing here redefines the design tokens —
+   it only adds the layout and components unique to this tool.
+   ===================================================================== */
+
+
+/* =====================================================================
+   1. BREADCRUMB
+   ===================================================================== */
+
+.ci-breadcrumb {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: var(--space-4) var(--space-6) 0;
+}
+
+.ci-breadcrumb-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+}
+
+.ci-breadcrumb-list li:not(:last-child)::after {
+  content: "/";
+  margin-left: var(--space-2);
+  color: var(--border-strong);
+}
+
+.ci-breadcrumb-list a {
+  color: var(--text-secondary);
+  transition: color var(--transition-fast);
+}
+
+.ci-breadcrumb-list a:hover {
+  color: var(--primary);
+}
+
+.ci-breadcrumb-list li[aria-current="page"] {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+
+/* =====================================================================
+   2. TOOL HEADER
+   ===================================================================== */
+
+.ci-tool-header {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: var(--space-6) var(--space-6) var(--space-7);
+  text-align: center;
+}
+
+.ci-tool-title {
+  font-size: clamp(2rem, 1.6rem + 1.6vw, 2.75rem);
+  margin-bottom: var(--space-4);
+}
+
+.ci-tool-subtitle {
+  font-size: 1.0625rem;
+  color: var(--text-secondary);
+}
+
+
+/* =====================================================================
+   3. ERROR BANNER
+   ===================================================================== */
+
+.ci-error-banner {
+  max-width: var(--container-max);
+  margin: 0 auto var(--space-5);
+  padding: 0 var(--space-6);
+}
+
+.ci-error-banner:not([hidden])::before {
+  content: attr(data-message);
+  display: block;
+  padding: var(--space-4) var(--space-5);
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid var(--danger);
+  border-radius: var(--radius-md);
+  color: var(--danger);
+  font-size: 0.9375rem;
+  font-weight: 500;
+}
+
+
+/* =====================================================================
+   4. UPLOAD ZONE
+   ===================================================================== */
+
+.ci-upload-section {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--space-6) var(--space-7);
+}
+
+.ci-upload-zone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-3);
+  padding: var(--space-9) var(--space-6);
+  background: var(--card);
+  border: 2px dashed var(--border-strong);
+  border-radius: var(--radius-xl);
+  cursor: pointer;
+  transition: border-color var(--transition-base), background-color var(--transition-base), transform var(--transition-fast);
+}
+
+.ci-upload-zone:hover,
+.ci-upload-zone:focus-visible {
+  border-color: var(--primary);
+  background: var(--card-hover);
+}
+
+.ci-upload-zone.ci-upload-zone--dragover {
+  border-color: var(--primary);
+  background: var(--card-hover);
+  transform: scale(1.01);
+  box-shadow: var(--shadow-glow-primary);
+}
+
+.ci-upload-icon {
+  color: var(--primary);
+  margin-bottom: var(--space-2);
+}
+
+.ci-upload-title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  color: var(--text-primary);
+}
+
+.ci-upload-subtitle {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.ci-upload-hint {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  max-width: 420px;
+}
+
+.ci-upload-hint kbd {
+  padding: 0.1rem 0.4rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  background: var(--surface);
+}
+
+.ci-upload-formats {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+}
+
+
+/* =====================================================================
+   5. WORKSPACE / BATCH LIST
+   ===================================================================== */
+
+.ci-workspace {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--space-6) var(--space-9);
+}
+
+.ci-batch-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-4);
+}
+
+.ci-batch-title {
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  color: var(--text-primary);
+}
+
+.ci-batch-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-bottom: var(--space-7);
+  max-height: 320px;
+  overflow-y: auto;
+}
+
+.ci-batch-item {
+  display: grid;
+  grid-template-columns: 56px 1fr auto auto;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-3) var(--space-4);
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  transition: border-color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.ci-batch-item:hover {
+  border-color: var(--border-strong);
+}
+
+.ci-batch-item--active {
+  border-color: var(--primary);
+  background: var(--card-hover);
+}
+
+.ci-batch-thumb {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-sm);
+  object-fit: cover;
+  background: var(--surface);
+}
+
+.ci-batch-info {
+  min-width: 0;
+}
+
+.ci-batch-name {
+  display: block;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ci-batch-meta {
+  display: block;
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+}
+
+.ci-batch-progress {
+  grid-column: 1 / -1;
+  height: 4px;
+  border-radius: var(--radius-full);
+  background: var(--border);
+  overflow: hidden;
+  display: none;
+}
+
+.ci-batch-progress-bar {
+  height: 100%;
+  width: 0%;
+  background: var(--gradient-brand);
+  transition: width var(--transition-base);
+}
+
+.ci-batch-item--processing .ci-batch-progress {
+  display: block;
+}
+
+.ci-batch-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.ci-batch-icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.ci-batch-icon-btn:hover {
+  background: var(--surface);
+  color: var(--danger);
+}
+
+
+/* =====================================================================
+   6. MAIN GRID (controls + preview)
+   ===================================================================== */
+
+.ci-main-grid {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: var(--space-6);
+  align-items: start;
+}
+
+.ci-controls {
+  position: sticky;
+  top: calc(var(--header-height) + var(--space-4));
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  padding: var(--space-5);
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  max-height: calc(100vh - var(--header-height) - var(--space-8));
+  overflow-y: auto;
+}
+
+.ci-control-group {
+  padding-bottom: var(--space-5);
+  border-bottom: 1px solid var(--border);
+}
+
+.ci-control-group:last-of-type {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.ci-control-heading {
+  font-family: var(--font-display);
+  font-size: 0.9375rem;
+  color: var(--text-primary);
+  margin-bottom: var(--space-3);
+}
+
+.ci-help-text {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  margin-top: var(--space-2);
+}
+
+/* --- Presets --- */
+.ci-presets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+
+.ci-preset-btn {
+  padding: 0.4rem 0.875rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  transition: all var(--transition-fast);
+}
+
+.ci-preset-btn:hover {
+  color: var(--text-primary);
+  border-color: var(--border-strong);
+}
+
+.ci-preset-btn--active {
+  color: #fff;
+  background: var(--gradient-brand);
+  border-color: transparent;
+}
+
+/* --- Target size grid --- */
+.ci-target-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-2);
+  margin-bottom: var(--space-3);
+}
+
+.ci-target-btn {
+  padding: 0.5rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.ci-target-btn:hover {
+  border-color: var(--border-strong);
+  color: var(--text-primary);
+}
+
+.ci-target-btn--active {
+  color: #fff;
+  background: var(--gradient-brand);
+  border-color: transparent;
+}
+
+/* --- Sliders & numeric inputs --- */
+.ci-slider-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.ci-slider {
+  flex: 1;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 4px;
+  border-radius: var(--radius-full);
+  background: var(--border);
+  outline: none;
+}
+
+.ci-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--primary);
+  border: 2px solid #fff;
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  transition: transform var(--transition-fast);
+}
+
+.ci-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+}
+
+.ci-slider::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--primary);
+  border: 2px solid #fff;
+  cursor: pointer;
+}
+
+.ci-slider--zoom {
+  max-width: 140px;
+}
+
+.ci-number-input,
+.ci-select {
+  padding: 0.5rem 0.75rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  width: 72px;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.ci-number-input--wide {
+  width: 100%;
+}
+
+.ci-select--full {
+  width: 100%;
+}
+
+.ci-number-input:focus,
+.ci-select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(79, 140, 255, 0.16);
+}
+
+.ci-unit {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+/* --- Resize controls --- */
+.ci-radio-row {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+
+.ci-radio-label {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.ci-radio-label input {
+  accent-color: var(--primary);
+}
+
+.ci-resize-fields {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.ci-dimension-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.ci-lock-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  flex-shrink: 0;
+  transition: color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.ci-lock-btn[aria-pressed="true"] {
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+/* --- Checkbox list --- */
+.ci-checkbox-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.ci-checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.ci-checkbox-label input {
+  accent-color: var(--primary);
+}
+
+.ci-reset-btn {
+  width: 100%;
+  justify-content: center;
+}
+
+
+/* =====================================================================
+   7. PREVIEW AREA
+   ===================================================================== */
+
+.ci-preview-area {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.ci-preview-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.ci-view-toggle {
+  display: inline-flex;
+  padding: var(--space-1);
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+}
+
+.ci-view-btn {
+  padding: 0.4rem 1rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  border-radius: var(--radius-full);
+  transition: all var(--transition-fast);
+}
+
+.ci-view-btn--active {
+  color: #fff;
+  background: var(--gradient-brand);
+}
+
+.ci-zoom-control {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.ci-zoom-label {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+}
+
+.ci-zoom-value {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+  min-width: 42px;
+}
+
+/* --- Preview stage --- */
+.ci-preview-stage {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 320px;
+  padding: var(--space-5);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.ci-preview-placeholder {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.9375rem;
+}
+
+/* --- Before/after compare slider --- */
+.ci-compare-frame {
+  position: relative;
+  max-width: 100%;
+  max-height: 60vh;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  line-height: 0;
+}
+
+.ci-compare-img {
+  display: block;
+  max-width: 100%;
+  max-height: 60vh;
+  width: auto;
+  height: auto;
+  user-select: none;
+  transform-origin: center;
+}
+
+.ci-compare-clip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 50%;
+  overflow: hidden;
+  border-right: 2px solid #fff;
+}
+
+.ci-compare-clip .ci-compare-img {
+  max-height: 60vh;
+  height: 100%;
+  width: auto;
+}
+
+.ci-compare-handle {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 100%;
+  width: 2px;
+  transform: translateX(-1px);
+  cursor: ew-resize;
+  touch-action: none;
+}
+
+.ci-compare-handle-grip {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: var(--shadow-md);
+}
+
+.ci-compare-handle-grip::before,
+.ci-compare-handle-grip::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 6px;
+  height: 6px;
+  border-top: 2px solid var(--bg);
+  border-right: 2px solid var(--bg);
+}
+
+.ci-compare-handle-grip::before {
+  left: 10px;
+  transform: translateY(-50%) rotate(-135deg);
+}
+
+.ci-compare-handle-grip::after {
+  right: 10px;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.ci-compare-tag {
+  position: absolute;
+  top: var(--space-3);
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  pointer-events: none;
+}
+
+.ci-compare-tag--original {
+  left: var(--space-3);
+}
+
+.ci-compare-tag--compressed {
+  right: var(--space-3);
+}
+
+/* --- Side-by-side view --- */
+#ci-side-view {
+  gap: var(--space-4);
+  align-items: flex-start;
+}
+
+.ci-side-panel {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  text-align: center;
+}
+
+.ci-side-panel .ci-compare-tag {
+  position: static;
+  display: inline-block;
+  margin-bottom: var(--space-3);
+  background: var(--card);
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+}
+
+.ci-side-img {
+  max-width: 100%;
+  max-height: 50vh;
+  border-radius: var(--radius-md);
+}
+
+/* =====================================================================
+   8. IMAGE INFO / RESULTS
+   ===================================================================== */
+
+.ci-info-grid,
+.ci-results-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-3);
+}
+
+.ci-info-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding: var(--space-3) var(--space-4);
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+
+.ci-info-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.ci-info-value {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  color: var(--text-primary);
+  word-break: break-word;
+}
+
+.ci-result-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding: var(--space-4);
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  text-align: center;
+}
+
+.ci-result-card--accent {
+  background: var(--gradient-brand);
+  border-color: transparent;
+}
+
+.ci-result-card--accent .ci-result-label,
+.ci-result-card--accent .ci-result-value {
+  color: #fff;
+}
+
+.ci-result-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.ci-result-value {
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+
+/* =====================================================================
+   9. ACTIONS
+   ===================================================================== */
+
+.ci-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.ci-actions .ci-number-input--wide {
+  flex: 1;
+  min-width: 160px;
+}
+
+
+/* =====================================================================
+   10. SUPPORTED FORMATS
+   ===================================================================== */
+
+.ci-formats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-5);
+}
+
+.ci-formats-card {
+  padding: var(--space-6);
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.ci-formats-card-title {
+  font-family: var(--font-display);
+  font-size: 1.0625rem;
+  margin-bottom: var(--space-2);
+  color: var(--text-primary);
+}
+
+.ci-formats-card-desc {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+}
+
+
+/* =====================================================================
+   11. RESPONSIVE
+   ===================================================================== */
+
+@media (max-width: 1180px) {
+  .ci-main-grid {
+    grid-template-columns: 280px 1fr;
+  }
+}
+
+@media (max-width: 960px) {
+  .ci-main-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ci-controls {
+    position: static;
+    max-height: none;
+  }
+
+  .ci-info-grid,
+  .ci-results-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ci-formats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #ci-side-view {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 640px) {
+  .ci-batch-item {
+    grid-template-columns: 48px 1fr;
+  }
+
+  .ci-batch-actions {
+    grid-column: 2;
+    justify-content: flex-end;
+  }
+
+  .ci-target-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ci-info-grid,
+  .ci-results-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .ci-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .ci-actions .tg-btn {
+    width: 100%;
+  }
+}
